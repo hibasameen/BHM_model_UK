@@ -122,7 +122,7 @@ R_0 = widgets.BoundedFloatText(
 )
 
 rel_λ = widgets.BoundedFloatText(
-    value= 0.5,
+    value= 0.4,
     step= 0.001,
     min = .001,
     max = .99,
@@ -247,9 +247,9 @@ def displaySlider(slide_var):
         τ.value                 = 0.005
         τ_max.value             = 0.016     # Irrelevant
         τ_step.value            = 0.001     # Irrelevant
-        Δ.value                 = 0.2
-        Δ_min.value             = 0.2
-        Δ_step.value            = 0.2
+        Δ.value                 = 0.0
+        Δ_min.value             = 0.1
+        Δ_step.value            = 0.1
         display(Δ_min)
         display(Δ_step)
         display(τ)

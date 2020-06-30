@@ -302,7 +302,7 @@ class corona_model(object):
 def generate_plots(Δ, τ, ξ_base, A_rel, d_vaccine, rel_ρ, δ_param, \
              ωR_param, π_D, R_0, rel_λ, initial_infect, slide_var):
 
-    colors = ['red', 'blue']
+    colors = ['orange', 'green']
     styles = ['dot', 'dash']
 
     rmin = 0
@@ -400,7 +400,7 @@ def generate_plots(Δ, τ, ξ_base, A_rel, d_vaccine, rel_ρ, δ_param, \
     fig['layout'].update(height=800, width=1000, showlegend = False)
 
     fig['layout']['xaxis1'].update(title = go.layout.xaxis.Title(
-                                text='Days since 100th case (5/3/2020)', font=dict(color='black')), range = [0, 200], \
+                                text='Days since 100th case (5/3/2020)', font=dict(color='black')), range = [0, 600], \
                                    gridcolor = 'rgb(220,220,220)', showline=True, linewidth=1, linecolor='black', mirror=True)
     fig['layout']['xaxis2'].update(title = go.layout.xaxis.Title(
                                 text='Days since 100th case (5/3/2020)', font=dict(color='black')), range = [0, 600], \
@@ -413,7 +413,7 @@ def generate_plots(Δ, τ, ξ_base, A_rel, d_vaccine, rel_ρ, δ_param, \
                                    gridcolor = 'rgb(220,220,220)', showline=True, linewidth=1, linecolor='black', mirror=True)
 
     fig['layout']['yaxis1'].update(title=go.layout.yaxis.Title(
-                                text='Logarithm - Base 10', font=dict(color='black')), type='log', range = [rmin, np.log10(1_000_000)], gridcolor = 'rgb(220,220,220)', \
+                                text='Logarithm - Base 10', font=dict(color='black')), type='log', range = [rmin, np.log10(10_000_000)], gridcolor = 'rgb(220,220,220)', \
                                    showline=True, linewidth=1, linecolor='black', mirror=True)
     fig['layout']['yaxis2'].update(title=go.layout.yaxis.Title(
                                 text='Fraction of Initial Population', font=dict(color='black')), range=[imin, imax], gridcolor = 'rgb(220,220,220)', showline=True, linewidth=1, linecolor='black', mirror=True)
